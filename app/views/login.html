@@ -1,0 +1,14 @@
+<h1> Login </h1>
+<table style="width:100%; border: solid 2px red;">
+  <tr>
+    <th>Name</th>
+    <th>Phone</th>
+  </tr>
+  <tr *ngFor="let employee of employees; let i = index;">
+    <td>{{employee.name}}</td>
+    <td>{{employee.phone}}</td> 
+    <td><input type="button" (click)="removeEmployee(i)" value="Remove"/> </td> 
+  </tr>
+    
+   <input type="button" (click)="addEmployee()" value="Add Employee"/>  
+</table>
